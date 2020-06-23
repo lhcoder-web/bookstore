@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
+    "babel-loader": "^8.1.0",
     "core-js": "^3.6.4",
     "epubjs": "^0.3.71",
     "localforage": "^1.7.3",

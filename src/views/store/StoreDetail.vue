@@ -254,6 +254,7 @@
       parseBook(url) {
         // 通过电子书或opf文件的url生成Book对象
         // this.book = new Epub('http://47.99.166.157/epub2/2018_Book_Africa-EuropeResearchAndInnova/OEBPS/package.opf')
+        console.log(url)
         this.book = new Epub(url);
         // 获取电子书的metadata信息
         this.book.loaded.metadata.then(metadata => {
@@ -276,7 +277,7 @@
                 const reg = new RegExp('<.+?>', 'g')
                 const text = section.output.replace(reg, '').replace(/\s\s/g, '')
                 // 将纯文本信息保存到description变量中，用于进行摘要信息展示
-                this.description = text
+                this.description = text;
               })
             }
           }
@@ -438,6 +439,7 @@
       width: 100%;
       height: px2rem(52);
       box-shadow: 0 px2rem(-2) px2rem(2) rgba(0, 0, 0, .1);
+      background-color: #fff;
       .bottom-btn {
         flex: 1;
         color: $color-blue;
